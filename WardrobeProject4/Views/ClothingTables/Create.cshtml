@@ -42,15 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Occasion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-
-                @*DropDown List for Occasion*@
-                @Html.DropDownList("Occasion", new List<SelectListItem>
-           {
-                new SelectListItem { Text = "Business", Value = "1" },
-                new SelectListItem { Text = "Casual", Value = "2", },
-
-            }, "Select Occasion")
-
+                @Html.EditorFor(model => model.Occasion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Occasion, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,16 +50,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Season, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*//DropDownList for Season*@
-                @Html.DropDownList("Season", new List<SelectListItem>
-           {
-                new SelectListItem { Text = "Winter", Value = "1" },
-                new SelectListItem { Text = "Spring", Value = "2", },
-                new SelectListItem { Text = "Summer", Value = "3" },
-                new SelectListItem { Text = "Fall", Value = "4" },
-                new SelectListItem { Text = "All Seasons", Value = "5" }
-            }, "Select Season")
-
+                @Html.EditorFor(model => model.Season, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Season, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -75,14 +58,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ClothingType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*DropDown List for Clothing Type*@
-                @Html.DropDownList("Clothing Type", new List<SelectListItem>
-           {
-                new SelectListItem { Text = "Bottom", Value = "1" },
-                new SelectListItem { Text = "Top", Value = "2", },
-                new SelectListItem { Text = "Shoes", Value = "3" },
-                new SelectListItem { Text = "Accessory", Value = "4" }
-            }, "Select Clothing Type")
+                @Html.EditorFor(model => model.ClothingType, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ClothingType, "", new { @class = "text-danger" })
             </div>
         </div>
